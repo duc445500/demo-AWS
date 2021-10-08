@@ -1,0 +1,22 @@
+server:
+  port: 8000
+
+spring:
+  datasource:
+#     url: jdbc:sqlserver://localhost:1433;databaseName=user_db
+#     username: sa
+#     password: 123456
+#     driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://database-1.c7ei06np2fxk.ap-southeast-1.rds.amazonaws.com:1433;databaseName=database1
+    username: sa
+    password: anhduc123456
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.SQLServer2012Dialect
+
+# spring-boot:run -Dspring.profiles.active=dev -o
